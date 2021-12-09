@@ -1,0 +1,102 @@
+/*Font Options
+font-family: 'Raleway', sans-serif;
+font-family: 'Rum Raisin', sans-serif;
+font-family: 'Shadows Into Light Two', cursive;
+font-family: 'Sofia', cursive;
+*/
+
+body {
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    background: url(images/pinkSparkle.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: rgba(0, 0, 0, 0.767);
+}
+
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:focus .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: black;
+}
+
+/* change the nav background color */
+.navbar-custom {
+    background-color: rgba(250, 250, 250, .7);
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.btn-primary {
+    background-color: rgb(231, 3, 155);
+    border-color: rgb(250, 250, 250);
+}
+
+.display-5 {
+    font-family: 'Sofia', cursive;
+}
+
+.border-top {
+    border-color: rgb(231, 3, 155);
+}
+
+.lead {
+    font-size: 1.5em;
+}
+
+#nav-logo {
+    max-height: 125px;
+}
+
+/*Home Page*/
+.home-hero {
+    background-color: rgba(250, 250, 250, .5);
+}
+
+#home-logo {
+    margin-top: 130px;
+}
+
+/*Pricing Page*/
+
+#class-ul {
+    height: 150px;
+}
+
+#price-tool {
+    max-width: 90%;
+}
+
+@media only screen and (max-width: 600px) {
+
+
+    /*Home Page*/
+
+    .custom-nav {
+        position: absolute;
+    }
+
+    .custom-footer {
+        position: relative;
+        padding-top: 100px;
+    }
+
+    #home-logo {
+        margin-top: 160px;
+    }
+
+    /*Services Page*/
+
+    .album > img {
+        max-height: 200px;
+    }
+
+}
