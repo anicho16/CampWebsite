@@ -7,6 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Amber Nicholas">
     <meta name="generator" content="Hugo 0.88.1">
+    <script src="camp.js"></script>
 
     <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,10 +27,10 @@
 
     <!-- Custom styles for this template -->
     <link href="camp.css" rel="stylesheet">
+
 </head>
 
-<body>
-
+<body onload="initPayPalButton()">
     <!--Icons-->
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
         <symbol id="facebook" viewBox="0 0 16 16">
@@ -45,8 +46,9 @@
                 d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
         </symbol>
     </svg>
+
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light navbar-custom sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light navbar-custom sticky-top border-bottom border-white border-3">
             <div class="container-fluid">
                 <a class="navbar-brand mx-auto" href="index.html"><img id="nav-logo" src="images/BannerLogo.png"
                         alt="Fairytale Sisters Enrichment"></a>
@@ -73,8 +75,22 @@
                                 <li><a class="dropdown-item" href="about.html#belle">Ms. Amber</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item px-3">
-                            <a class="nav-link" aria-current="page" href="pricing.html">Pricing</a>
+                        <li class="nav-item px-3 dropdown">
+                            <a class="nav-link dropdown-toggle" href="pricing.html" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Registration/Pricing
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="payment.html">Make a Payment</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="contact.html">Registration/ Contact Us</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="pricing.html">Pricing</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -82,115 +98,33 @@
         </nav>
     </header>
     <main>
-        <div class="border-top border-white border-3">
-            <div class="text-center mx-auto py-5 w-75">
-                <img class="d-block mx-auto mb-4 rounded-circle" src="images/crownWhiteBG.png" alt="crown" width="100">
-                <h1 class="display-5">Our camps and classes provide priceless knowledge and experiences for your little
-                    one.</h1>
-            </div>
-        </div>
 
-        <div class="album py-5">
-            <div class="container">
-
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img class="img-fluid" src="images/books.jpg" alt="Kid coloring">
-                            <div class="card-body">
-                                <h5 class="card-title">Writing and Coloring</h5>
-                                <p class="card-text">We practice tactile skills with non-traditional content that
-                                    exposes your child to culture around the world.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img class="img-fluid" src="images/princess.jpg" alt="princess child">
-                            <div class="card-body">
-                                <h5 class="card-title">Princess Skills</h5>
-                                <p class="card-text">We teach the etiquette and manners expected of princesses.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img class="img-fluid" src="images/yoga.jpg" alt="child doing yoga">
-                            <div class="card-body">
-                                <h5 class="card-title">Yoga and Meditation</h5>
-                                <p class="card-text">We teach stress management techniques that will be valuable for
-                                    your child in adulthood.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img class="img-fluid" src="images/paint.jpg" alt="kids with paint on them">
-                            <div class="card-body">
-                                <h5 class="card-title">Arts and Crafts</h5>
-                                <p class="card-text">Painting and crafts allow your child to explore their creativity.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img class="img-fluid" src="images/3Dpen.jpg" alt="Kids using 3D pens">
-                            <div class="card-body">
-                                <h5 class="card-title">Technology</h5>
-                                <p class="card-text">We use technology, such as 3D printers and tablets, to expose your
-                                    child to needed modern engineering and computer skills.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img class="img-fluid" src="images/creations.jpg" alt="Pretend play">
-                            <div class="card-body">
-                                <h5 class="card-title">Pretend Play</h5>
-                                <p class="card-text">We encourage career exploratioan and social skills through pretend
-                                    play.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img class="img-fluid" src="images/puppy.jpg" alt="kids playing with puppies">
-                            <div class="card-body">
-                                <h5 class="card-title">Kindness</h5>
-                                <p class="card-text">We teach kindness to others, our environment, and to ourselves.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img class="img-fluid" src="images/princessGame.jpg" alt="princess playing with children">
-                            <div class="card-body">
-                                <h5 class="card-title">Games</h5>
-                                <p class="card-text">Children learn how to honorably win, lose, and have friendly
-                                    competition through games.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img class="img-fluid" src="images/coloring.jpg" alt="Kids reading books in forest">
-                            <div class="card-body">
-                                <h5 class="card-title">Love for Reading</h5>
-                                <p class="card-text">We try to inspire young ones to gain passion for reading early on.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+        <div class="home-hero px-5" id="smart-button-container">
+            <div style="text-align: center;">
+                <div style="margin-bottom: 1.25rem;">
+                    <h1 class="pt-3 fw-bold">Make a payment</h1>
+                    <h2 class="py-3">Choose your camp from the following options:<br> Week Camp or Saturday Camp with
+                        optional after-care.</h2>
+                    <select class="p-2 rounded" id="item-options">
+                        <option value="Week Enrichment Camp" price="300">Week Enrichment Camp - 300 USD</option>
+                        <option value="Week Camp with After Care" price="350">Week Camp with After Care - 350 USD
+                        </option>
+                        <option value="Saturday Enrichment Camp" price="100">Saturday Enrichment Camp - 100 USD</option>
+                        <option value="Saturday Camp with After Care" price="125">Saturday Camp with After Care - 125
+                            USD</option>
+                    </select>
+                    <select style="visibility: hidden" id="quantitySelect"></select>
                 </div>
+                <div id="paypal-button-container"></div>
             </div>
         </div>
+        <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD"
+            data-sdk-integration-source="button-factory"></script>
 
     </main>
 
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 mx-3">
+    <footer
+        class="d-flex flex-wrap justify-content-between align-items-center my-1 py-0 mx-3 fixed-bottom custom-footer">
         <div class="col-md-4 d-flex align-items-center">
             <a href="index.html" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
                 <img class="bi rounded-circle" width="30" height="24" src="images/crownWhiteBG.png">
@@ -206,8 +140,8 @@
                         width="24" height="24">
                         <use xlink:href="#instagram" />
                     </svg></a></li>
-            <li class="ms-3"><a class="text-muted" href="https://www.facebook.com/ftsisters" target="_blank"><svg class="bi"
-                        width="24" height="24">
+            <li class="ms-3"><a class="text-muted" href="https://www.facebook.com/ftsisters" target="_blank"><svg
+                        class="bi" width="24" height="24">
                         <use xlink:href="#facebook" />
                     </svg></a></li>
         </ul>
