@@ -75,6 +75,12 @@ body {
     max-width: 90%;
 }
 
+/*About Page*/
+
+.img-50 {
+    max-width: 50%;
+}
+
 @media only screen and (max-width: 600px) {
 
 
