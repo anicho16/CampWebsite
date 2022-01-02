@@ -62,7 +62,7 @@ function calculatePrice() {
     if (afterCare && weekCamp) {
         totalCost = numberOfKids * campPrice + 50 * numberOfKids;
     } else if (afterCare && dayCamp) {
-        totalCost = numberOfKids * campPrice + 15 * numberOfKids;
+        totalCost = numberOfKids * campPrice + 25 * numberOfKids;
     } else {
         totalCost = numberOfKids * campPrice;
     }
